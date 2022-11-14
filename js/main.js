@@ -60,6 +60,56 @@ function showPosition(position) {
     console.log(position.coords.longitude);
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
+
+    // ホットペッパーAPIキーセット
+    // let API_KEY = '38f4bc42aba3b5a1';
+
+    // let URL = 'http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=38f4bc42aba3b5a1'
+
+    $.ajax({
+        url: 'http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=38f4bc42aba3b5a1',
+        type: 'GET',
+        dataType: 'jsonp',
+        jsonpCallback: 'callback'
+    }).done(function (data) {
+        var dummy = data; // 成功時 この処理はダミーなので変更してください
+    }).fail(function (data) {
+        var dummy = data; // 失敗時
+    });
+
+
+
+
+
+    // + '&lat=33.590543&lng=130.420096&range=2&order=1&format=json'
+    // http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=[APIキー]&lat=33.590543&lng=130.420096&range=2&order=1&format=json
+
+    // $.getJSON(URL, (data) => {
+    //     const recipes = data.result;
+    //     console.log(recipes);
+    //     // updateText(recipes);
+    // });
+
+    // const updateText = (data) => {
+    //     console.log(data.length);
+    //     for (let i = 0; i < data.length; i++) {
+    //         const insertHtml = `
+    //         <li class="recipeItem">
+    //             <p class="rank">${data[i].rank}位</p>
+    //             <a href="${data[i].recipeUrl}" target="_blank">
+    //                 <img src="${data[i].foodImageUrl}" alt="${data[i].recipeTitle} 画像">
+    //             </a>
+    //             <h2 class="recipeTitle">${data[i].recipeTitle}</h2>
+    //             <p class="recipeDescription">${data[i].recipeDescription}</p>
+    //             <p class="material"><材料>${data[i].recipeMaterial}</p>
+    //             <p class="indication"><調理時間>${data[i].recipeIndication}</p>
+    //             <p class="cost"><費用の目安>${data[i].recipeCost}</p>
+    //         </li>
+    //     `;
+    //         console.log(insertHtml);
+    //         $('#recipe_list').append(insertHtml);
+    //     }
+    // }
 }
 
 function showError(error) {
