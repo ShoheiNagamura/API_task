@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>魚料理検索アプリ</title>
+</head>
+
+<body>
+    <header>
+        <img class="header-icon" src="./img/鮭アイコン2.png" alt="">
+        <h1>魚料理検索アプリ</h1>
+    </header>
+
+    <main>
+        <div class="search-area">
+            <p id="fish-title">魚の名前で検索</p>
+            <input id="fish-name" type="text" placeholder="料理する魚の名前を入力してください">
+            <button class="recipe-search">レシピで検索</button>
+            <button class="reset">リセット</button>
+        </div>
+    </main>
+
+    <!-- 新規 -->
+    <ul id="recipe_list"></ul>
+
+
+
+    <!-- <h1>位置情報取得</h1>
+    <div id="output">
+        <p>now loading...</p>
+    </div> -->
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
