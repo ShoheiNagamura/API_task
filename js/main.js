@@ -18,32 +18,32 @@ $("button").on("click", function () {
         url = "https://app.rakuten.co.jp/services/api/Recipe/CategoryRanking/20170426?applicationId=1037138608625946581&categoryId=11-74";
     }
 
-    // 楽天レシピランキングAPIへリクエスト
-    $.getJSON(url, (data) => {
-        const recipes = data.result;
-        updateText(recipes);
-    });
+    // // 楽天レシピランキングAPIへリクエスト
+    // $.getJSON(url, (data) => {
+    //     const recipes = data.result;
+    //     updateText(recipes);
+    // });
 
-    const updateText = (data) => {
-        console.log(data.length);
-        for (let i = 0; i < data.length; i++) {
-            const insertHtml = `
-            <li class="recipeItem">
-                <p class="rank">${data[i].rank}位</p>
-                <a href="${data[i].recipeUrl}" target="_blank">
-                    <img src="${data[i].foodImageUrl}" alt="${data[i].recipeTitle} 画像">
-                </a>
-                <h2 class="recipeTitle">${data[i].recipeTitle}</h2>
-                <p class="recipeDescription">${data[i].recipeDescription}</p>
-                <p class="material"><材料>${data[i].recipeMaterial}</p>
-                <p class="indication"><調理時間>${data[i].recipeIndication}</p>
-                <p class="cost"><費用の目安>${data[i].recipeCost}</p>
-            </li>
-        `;
-            console.log(insertHtml);
-            $('#recipe_list').append(insertHtml);
-        }
-    }
+    // const updateText = (data) => {
+    //     console.log(data.length);
+    //     for (let i = 0; i < data.length; i++) {
+    //         const insertHtml = `
+    //         <li class="recipeItem">
+    //             <p class="rank">${data[i].rank}位</p>
+    //             <a href="${data[i].recipeUrl}" target="_blank">
+    //                 <img src="${data[i].foodImageUrl}" alt="${data[i].recipeTitle} 画像">
+    //             </a>
+    //             <h2 class="recipeTitle">${data[i].recipeTitle}</h2>
+    //             <p class="recipeDescription">${data[i].recipeDescription}</p>
+    //             <p class="material"><材料>${data[i].recipeMaterial}</p>
+    //             <p class="indication"><調理時間>${data[i].recipeIndication}</p>
+    //             <p class="cost"><費用の目安>${data[i].recipeCost}</p>
+    //         </li>
+    //     `;
+    //         console.log(insertHtml);
+    //         $('#recipe_list').append(insertHtml);
+    //     }
+    // }
 })
 
 $(".reset").on("click", function () {
