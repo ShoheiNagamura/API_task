@@ -94,8 +94,7 @@ $("button").on("keydown", function (e) {
                 <p class="recipeDescription">${data[i].recipeDescription}</p>
                 <p class="material"><材料><br>${data[i].recipeMaterial}</p>
                 <p class="indication"><調理時間>${data[i].recipeIndication}</p>
-                <p class="cost"><費用の目安>${data[i].recipeCost}</p>
-                
+                <p class="cost"><費用の目安>${data[i].recipeCost}</p>                
             </li>
         `;
                 console.log(insertHtml);
