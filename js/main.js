@@ -64,7 +64,7 @@ function showPosition(position) {
     // ホットペッパーAPIキーセット
     // let API_KEY = '38f4bc42aba3b5a1';
 
-    let URL = 'http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=38f4bc42aba3b5a1'
+    let URL = '//webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=38f4bc42aba3b5a1'
 
     // $.ajax({
     //     url: 'http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=38f4bc42aba3b5a1',
