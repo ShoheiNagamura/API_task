@@ -64,31 +64,26 @@ function showPosition(position) {
     // ホットペッパーAPIキーセット
     // let API_KEY = '38f4bc42aba3b5a1';
 
-    // let URL = 'http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=38f4bc42aba3b5a1'
+    let URL = 'http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=38f4bc42aba3b5a1'
 
-    $.ajax({
-        url: 'http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=38f4bc42aba3b5a1',
-        type: 'GET',
-        dataType: 'jsonp',
-        jsonpCallback: 'callback'
-    }).done(function (data) {
-        var dummy = data; // 成功時 この処理はダミーなので変更してください
-    }).fail(function (data) {
-        var dummy = data; // 失敗時
-    });
-
-
-
-
-
+    // $.ajax({
+    //     url: 'http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=38f4bc42aba3b5a1',
+    //     type: 'GET',
+    //     dataType: 'jsonp',
+    //     jsonpCallback: 'callback'
+    // }).done(function (data) {
+    //     var dummy = data; // 成功時 この処理はダミーなので変更してください
+    // }).fail(function (data) {
+    //     var dummy = data; // 失敗時
+    // });
     // + '&lat=33.590543&lng=130.420096&range=2&order=1&format=json'
     // http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=[APIキー]&lat=33.590543&lng=130.420096&range=2&order=1&format=json
 
-    // $.getJSON(URL, (data) => {
-    //     const recipes = data.result;
-    //     console.log(recipes);
-    //     // updateText(recipes);
-    // });
+    $.getJSON(URL, (data) => {
+        const recipes = data.result;
+        console.log(recipes);
+        // updateText(recipes);
+    });
 
     // const updateText = (data) => {
     //     console.log(data.length);
